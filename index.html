@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bigg Boss E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1 class="brand-title">🛍️ Bigg Boss</h1>
+    <div class="search-filter">
+      <input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()">
+      <button onclick="filterCategory('men')">Men</button>
+      <button onclick="filterCategory('women')">Women</button>
+      <button onclick="filterCategory('all')">Show All</button>
+    </div>
+  </header>
+
+  <section id="product-list">
+    <div class="product" data-category="men">
+      <img src="shirt.jpeg" alt="Shirt">
+      <h2>Shirt</h2>
+      <p>₹499</p>
+      <button onclick="addToCart('Shirt', 499)">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men">
+      <img src="pant.jpeg" alt="Pant">
+      <h2>Pant</h2>
+      <p>₹799</p>
+      <button onclick="addToCart('Shoes', 799)">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men">
+      <img src="t shirt.jpeg" alt="T-shirt">
+      <h2>T-shirt</h2>
+      <p>₹399</p>
+      <button onclick="addToCart('T-shirt', 399)">Add to Cart</button>
+    </div>
+     <div class="product" data-category="men">
+      <img src="shoe.jpeg" alt="men Shoe">
+      <h2>Men Shoe</h2>
+      <p>₹999</p>
+      <button onclick="addToCart('Shoe', 999)">Add to Cart</button>
+    </div>
+     <div class="product" data-category="men">
+      <img src="watch.jpeg" alt="men Watch">
+      <h2>Men Watch</h2>
+      <p>₹499</p>
+      <button onclick="addToCart('Watch', 499)">Add to Cart</button>
+    </div>
+     <div class="product" data-category="women">
+      <img src="tops.jpeg" alt="Tops">
+      <h2>Tops</h2>
+      <p>₹499</p>
+      <button onclick="addToCart('Tops', 499)">Add to Cart</button>
+    </div>
+     <div class="product" data-category="women">
+      <img src="jeans.jpeg" alt="Jeans">
+      <h2>Jeans</h2>
+      <p>₹799</p>
+      <button onclick="addToCart('Jeans', 799)">Add to Cart</button>
+    </div>
+     <div class="product" data-category="women">
+      <img src="saree.jpeg" alt="Sarees">
+      <h2>Sarees</h2>
+      <p>₹999</p>
+      <button onclick="addToCart('Sarees', 999)">Add to Cart</button>
+    </div>
+     <div class="product" data-category="women">
+      <img src="women watch.jpeg" alt=" women Watch">
+      <h2>Women Watch</h2>
+      <p>₹499</p>
+      <button onclick="addToCart('women Watch', 499)">Add to Cart</button>
+    </div>
+     <div class="product" data-category="women">
+      <img src="women shoe.jpeg" alt=" women Shoe">
+      <h2>Women Shoe</h2>
+      <p>₹999</p>
+      <button onclick="addToCart('women Shoe', 999)">Add to Cart</button>
+    </div>
+  </section>
+
+  <section id="cart-section">
+    <h2>🛒 Your Cart</h2>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Cart items appear here -->
+      </tbody>
+    </table>
+    <div id="summary">
+      <strong>Grand Total: ₹<span id="total">0</span></strong>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Contact Us</h3>
+    <p>Email: support@biggbossstore.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: 123 Fashion Street, Chennai, India</p>
+    <p>© 2025 Bigg Boss Store. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
